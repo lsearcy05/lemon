@@ -1,6 +1,9 @@
+import logo from "./images/Logo.svg"
+
 export default function Nav(){
     return (
-        <nav>
+        <nav className="navbar">
+            <img src={logo} alt="Logo"></img>
             <ul>
                 <li>
                     <a href="/">Home</a>

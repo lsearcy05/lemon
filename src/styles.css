@@ -1,0 +1,81 @@
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar ul{
+    display: flex;
+    width: auto;
+}
+
+.navbar ul li {
+    list-style: none;
+    padding: 13px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-family: "Karla", sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.navbar img {
+    width: 202px;
+    height: 76px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    background-color: #495E57;
+    height: 406px;
+}
+
+
+main img {
+    width: 375px;
+    height: 426px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-right: auto;
+}
+
+.intro p {
+    font-family: "Karla", sans-serif;
+    text-wrap:wrap;
+    color: #EDEFEE;
+    width: 260px;
+    height: 80px;
+    font-weight: medium;
+}
+
+.intro h1 {
+    color: #F4CE14;
+    font-family: "Markazi Text", serif;
+    padding-top: 47px;
+}
+
+.intro h2 {
+    color: #EDEFEE;
+    font-family: "Markazi Text", serif;
+}
+
+.intro button {
+    width: 200px;
+    height: 60px;
+    border-radius: 16px;
+    background-color: #F4CE14;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Karla", sans-serif;
+    box-shadow: black;
+}
+
+.foodContainer {
+    background-color: #495E57;
+    display: flex;
+}
+
+
