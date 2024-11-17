@@ -31,7 +31,9 @@ main {
     justify-content: space-around;
     background-color: #495E57;
     height: 406px;
+    margin-bottom: 70px;
 }
+
 
 
 main img {
@@ -78,4 +80,29 @@ main img {
     display: flex;
 }
 
+.menu {
+        width: 200px;
+    height: 60px;
+    border-radius: 16px;
+    background-color: #F4CE14;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Karla", sans-serif;
+    box-shadow: black;
+}
 
+#specialContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    align-content: center;
+}
+
+#specialContainer h1 {
+    font-size: 40px;
+    font-family: "Karla", sans-serif;
+}
+
+#specialContainer button {
+    margin-top: 20px;
+}

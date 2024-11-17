@@ -10,9 +10,7 @@ export default function Main() {
                 <p>We are a family owned Mediterranean restaurant focused on traditional recipes served with a modern twist.</p>
                 <button className="Reserve">Reserve Table</button>
             </span>
-            <span className="foodContainer">
-                <img src={food} alt="Food"></img>
-            </span>
+            <span><img src={food} alt="Food"></img></span>     
         </main>
     )
 }
