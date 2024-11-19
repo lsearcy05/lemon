@@ -1,6 +1,31 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    z-index: 10001;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+}
 .navbar {
+    padding: 10px 13%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar ul{
@@ -9,16 +34,14 @@
 }
 
 .navbar ul li {
-    list-style: none;
-    padding: 13px;
+    display: inline-block;
+    padding: 1em;
 }
 
 .navbar ul li a {
-    text-decoration: none;
     font-family: "Karla", sans-serif;
     font-weight: bold;
     color: rgb(0, 0, 0);
-    font-size: 20px;
 }
 
 .navbar img {
@@ -81,7 +104,7 @@ main img {
 }
 
 .menu {
-        width: 200px;
+    width: 200px;
     height: 60px;
     border-radius: 16px;
     background-color: #F4CE14;

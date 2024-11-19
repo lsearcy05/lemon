@@ -1,9 +1,26 @@
+import { useState } from "react"
 import logo from "./images/Logo.svg"
 
 export default function Nav(){
+    const [menuOpen, setMenuOpen] = useState(false)
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen)
+    }
+
     return (
-        <nav className="navbar">
+        <nav className={'navbar'}>
+            <a href="/">
             <img src={logo} alt="Logo"></img>
+            </a>
+
+            {/* Mobile Navbar */}
+
+            <div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+            </div>
+
             <ul>
                 <li>
                     <a href="/">Home</a>
