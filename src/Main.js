@@ -1,16 +1,62 @@
-import React from "react";
-import food from "./images/restauranfood.jpg"
+import React, {useReducer} from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import Booking from "./Booking";
+import Header from "./Header";
+import ConfirmedBooking from "./ConfirmedBooking"
+import Footer from "./Footer";
 
 export default function Main() {
+
+    const seedRandom = function(seed){
+        var m = 2**35 - 31;
+        var a = 185852;
+        var s = seed % m;
+        return function(){
+            return (s = s * a % m) /m;
+        }
+    }
+
+    const fetchAPI = function(date){
+        let result = []
+        let random = seedRandom(date.getDate());
+        for (let i = 4; i <= 12; i++) {
+            if(random() < 0.5){
+                result.push(i + ':00 P.M.');
+            }
+            if(random() > 0.5){
+                result.push(i + ':30 P.M.');
+            }
+        }
+
+        return result;
+    }
+
+    const submitAPI = function(formData){
+        return true;
+    }
+
+    const initialState = {availableTimes: fetchAPI(new Date())};
+    const [state, dispatch] = useReducer(updateTimes,initialState);
+
+    function updateTimes(state, date) {
+        return {availableTimes: fetchAPI(new Date())}
+    }
+
+    const navigate = useNavigate();
+    function submitForm (formData){
+        if(submitAPI(formData)){
+            navigate('/confirmed');
+        }
+    }
     return (
-        <main>
-            <span className="intro">
-                <h1>Little Lemon</h1>
-                <h2>Chicago</h2>
-                <p>We are a family owned Mediterranean restaurant focused on traditional recipes served with a modern twist.</p>
-                <button className="Reserve">Reserve Table</button>
-            </span>
-            <span><img src={food} alt="Food"></img></span>     
+
+        <main className="main">
+            <Routes>
+                <Route path='/' element={<Header />} />
+                <Route path='/booking' element={<Booking availableTimes={state} dispatch={dispatch} submitForm={submitForm}/>}  />
+                <Route path="/confirmed" element={<ConfirmedBooking/>} />
+                <Route path="/footer" element={<Footer/>} />
+            </Routes>  
         </main>
     )
 }

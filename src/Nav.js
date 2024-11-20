@@ -8,20 +8,20 @@ export default function Nav(){
     }
 
     return (
-        <nav className={'navbar'}>
-            <a href="/">
-            <img src={logo} alt="Logo"></img>
+        <nav className={`navbar ${menuOpen ? "open" : ""}`}>
+            <a href="/" className="logo">
+            <img src={logo} alt="logo"></img>
             </a>
 
             {/* Mobile Navbar */}
 
-            <div>
+            <div className= "menu-icon" onClick={toggleMenu}>
                 <div className="bar"></div>
                 <div className="bar"></div>
                 <div className="bar"></div>
             </div>
 
-            <ul>
+            <ul className={`nav-links ${menuOpen ? "visible" : ""}`}>
                 <li>
                     <a href="/">Home</a>
                 </li>
