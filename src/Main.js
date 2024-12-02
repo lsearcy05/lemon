@@ -2,7 +2,7 @@ import React, {useReducer} from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Booking from "./Booking";
 import Header from "./Header";
-import ConfirmedBooking from "./ConfirmedBooking"
+import ConfirmedBooking from "./ConfirmedBooking";
 import Footer from "./Footer";
 
 export default function Main() {
@@ -19,12 +19,12 @@ export default function Main() {
     const fetchAPI = function(date){
         let result = []
         let random = seedRandom(date.getDate());
-        for (let i = 4; i <= 12; i++) {
+        for (let i = 4; i <= 11; i++) {
             if(random() < 0.5){
-                result.push(i + ':00 P.M.');
+                result.push(i + ':00');
             }
             if(random() > 0.5){
-                result.push(i + ':30 P.M.');
+                result.push(i + ':30');
             }
         }
 
