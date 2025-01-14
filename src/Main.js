@@ -17,7 +17,7 @@ export default function Main() {
     }
 
     const fetchAPI = function(date){
-        let result = []
+        let result = [];
         let random = seedRandom(date.getDate());
         for (let i = 4; i <= 11; i++) {
             if(random() < 0.5){
@@ -36,7 +36,7 @@ export default function Main() {
     }
 
     const initialState = {availableTimes: fetchAPI(new Date())};
-    const [state, dispatch] = useReducer(updateTimes,initialState);
+    const [state, dispatch] = useReducer(updateTimes, initialState);
 
     function updateTimes(state, date) {
         return {availableTimes: fetchAPI(new Date())}
