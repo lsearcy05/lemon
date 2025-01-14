@@ -4,6 +4,7 @@ import '@testing-library/jest-dom';
 import { toBeInTheDocument } from '@testing-library/jest-dom/matchers';
 import { click } from '@testing-library/user-event/dist/click';
 import { BrowserRouter } from 'react-router-dom';
+import BookingForm from './BookingForm';
 describe('BookingForm Component', () => {
   const mockDispatch = jest.fn();
   const mockSubmitForm = jest.fn();
